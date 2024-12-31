@@ -7,19 +7,24 @@
   --text-color-white: white;
 }
 
+
 /* General styles */
 html,
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 10px;
   line-height: 3.5em;
   font-weight: 300;
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: 'Roboto Condensed', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
 }
 
@@ -33,7 +38,7 @@ h2 {
   font-size: 5em;
   text-align: center;
   text-transform: uppercase;
-  line-height: 4em; 
+  line-height: 4em;
 }
 
 h3 {
@@ -66,12 +71,14 @@ h5 {
   font-size: 2em;
 }
 
-.nav-bar-ul{
+.nav-bar-ul {
   width: 1200px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.nav-bar-ul li{
+.nav-bar-ul li {
   list-style: none;
   text-align: center;
 }
@@ -83,8 +90,9 @@ h5 {
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: cover;
-  height: 650px;  
+  height: 650px;
   padding-top: 50px;
+  position: relative;
 }
 
 .header h2 {
@@ -94,16 +102,31 @@ h5 {
 
 .header .quote {
   font-size: 2.5em;
+  position: absolute;
+  left: 10%;
+  bottom: 100px;
 }
 
 
 /* Section 1 */
+#general-information {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#general-information .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 370px;
+}
+
 .dark-background {
   background-color: var(--bg-darkblue);
   color: var(--text-color-white);
 }
 
-.container{
+.container {
   width: 1200px;
   margin: 0 auto;
   padding: 75px 0;
@@ -125,6 +148,7 @@ h5 {
   letter-spacing: 0.5px;
   text-align: center;
   text-decoration: none;
+  padding: 10px 30px 10px 30px;
 }
 
 
@@ -149,6 +173,13 @@ h5 {
   width: 125px;
 }
 
+#structure div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 
 /* Section 3 */
 #team {
@@ -156,7 +187,19 @@ h5 {
   margin: 0 auto;
 }
 
-#team hr{
+#team > div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#team > div > article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#team hr {
   margin: 20px auto 30px auto;
   width: 40%;
 }
@@ -186,7 +229,8 @@ h5 {
   border: 1px solid black;
 }
 
-.schedule-table th, td {
+.schedule-table th,
+td {
   border: 1px solid black;
   padding: 5px 10px 5px 10px;
   text-align: center;
@@ -194,11 +238,14 @@ h5 {
 
 
 /* Footer */
-.footer{
+.footer {
   text-align: center;
   font-size: 1.9em;
   padding: 40px 100px 40px 100px;
   margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer h5 {
@@ -213,11 +260,16 @@ h5 {
 }
 
 .footer a {
- color: var(--bg-blue);
- text-decoration: none;
+  color: var(--bg-blue);
+  text-decoration: none;
 }
 
 .footer ul {
   list-style: none;
   padding: 0;
+}
+
+.map-frame {
+  height: 375px;
+  width: 60%;
 }
